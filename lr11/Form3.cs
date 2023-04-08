@@ -48,7 +48,7 @@ namespace lr11
             }
             catch
             {
-                MessageBox.Show("Ты пидор");
+                MessageBox.Show("Ошибка");
             };
         }
         private void Recover_FormClosed(object sender, FormClosedEventArgs e)
