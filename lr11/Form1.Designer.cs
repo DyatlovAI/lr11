@@ -217,9 +217,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(411, 475);
+            this.button2.Location = new System.Drawing.Point(449, 490);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 42);
+            this.button2.Size = new System.Drawing.Size(95, 27);
             this.button2.TabIndex = 20;
             this.button2.Text = "Вернуться";
             this.button2.UseVisualStyleBackColor = true;
@@ -253,7 +253,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
             this.PerformLayout();
 

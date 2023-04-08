@@ -23,7 +23,7 @@ namespace lr11
         {
             try
             {
-                MailAddress from = new MailAddress("zaidmingaliev@mail.ru", "Zaid");
+                MailAddress from = new MailAddress("zaid-mingaliev@mail.ru", "Zaid");
                 MailAddress to = new MailAddress(textBox1.Text);
                 MailMessage m = new MailMessage(from, to);
                 m.Subject = "Тест";
@@ -36,10 +36,11 @@ namespace lr11
                             m.Body = "<h1>Пароль: " + user.Pasword + "</h1>";
                         }
                     }
+                    
                 }
                 m.IsBodyHtml = true;
                 SmtpClient smtp = new SmtpClient("smtp.mail.ru", 587);
-                smtp.Credentials = new NetworkCredential("zaidmingaliev@mail.ru", "123");
+                smtp.Credentials = new NetworkCredential("zaid-mingaliev@mail.ru", "123");
                 smtp.EnableSsl = true;
                 smtp.Send(m);
 
@@ -47,7 +48,7 @@ namespace lr11
             }
             catch
             {
-                MessageBox.Show("Ошибка");
+                MessageBox.Show("Ты пидор");
             };
         }
         private void Recover_FormClosed(object sender, FormClosedEventArgs e)
