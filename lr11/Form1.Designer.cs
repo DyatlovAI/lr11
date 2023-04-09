@@ -45,7 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBoxpPass = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -190,12 +190,13 @@
             this.textBox8.Size = new System.Drawing.Size(332, 20);
             this.textBox8.TabIndex = 16;
             // 
-            // textBox9
+            // textBoxpPass
             // 
-            this.textBox9.Location = new System.Drawing.Point(109, 395);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(332, 20);
-            this.textBox9.TabIndex = 17;
+            this.textBoxpPass.Location = new System.Drawing.Point(109, 395);
+            this.textBoxpPass.Name = "textBoxpPass";
+            this.textBoxpPass.PasswordChar = '*';
+            this.textBoxpPass.Size = new System.Drawing.Size(332, 20);
+            this.textBoxpPass.TabIndex = 17;
             // 
             // label9
             // 
@@ -234,7 +235,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBoxpPass);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -262,13 +263,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -277,11 +271,18 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.TextBox textBoxpPass;
     }
 }
 

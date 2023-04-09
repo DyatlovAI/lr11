@@ -19,6 +19,7 @@ namespace lr11
         public string number_phone { get; set; }
         public string adres { get; set; }
         public string date_of_first_buy { get; set; }
+        
         public User()
         { }
         public User(string Name1, string FirstName, string Date_of_birthday, string Email, string number_phone, string adres, string date_of_first_buy, string Login1, string Pasword)
@@ -32,6 +33,11 @@ namespace lr11
             this.FirstName = FirstName;
             this.Name1 = Name1;
             this.Date_of_birthday = Date_of_birthday;
+            
+        }
+        public string getName()
+        {
+            return this.Name1;
         }
     }
 

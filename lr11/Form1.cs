@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace lr11
 {
     public partial class Form1 : Form
@@ -26,7 +27,7 @@ namespace lr11
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "" | textBox2.Text == "" | textBox3.Text == "" | textBox4.Text == "" | textBox5.Text == "" | textBox6.Text == "" | textBox7.Text == "" | textBox8.Text == "" | textBox9.Text == "" )
+            if (textBox1.Text == "" | textBox2.Text == "" | textBox3.Text == "" | textBox4.Text == "" | textBox5.Text == "" | textBox6.Text == "" | textBox7.Text == "" | textBox8.Text == "" | textBoxpPass.Text == "" )
             {
                 MessageBox.Show("введите все данные");
             }
@@ -34,23 +35,27 @@ namespace lr11
             {
                 using (UserContext db = new UserContext())
                 {
-                    User user = new User(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, this.GetHashString(textBox9.Text));
+                    User user = new User(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, 
+                        this.GetHashString(textBoxpPass.Text));
+                    
+
                     db.Users.Add(user);
                     db.SaveChanges();
+
                 }
                 MessageBox.Show("Аккаунт  " + textBox8.Text + " зарегистрирован");
-                
 
-                //User user = new User(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, this.GetHashString(textBox9.Text));
-                
+               
+
+
             }
+
         }
+
         private string GetHashString(string s)
         {
             byte[] bytes = Encoding.Unicode.GetBytes(s);
-
-            MD5CryptoServiceProvider CSP = new
-            MD5CryptoServiceProvider();
+            MD5CryptoServiceProvider CSP = new MD5CryptoServiceProvider();
             byte[] byteHash = CSP.ComputeHash(bytes);
             string hash = "";
             foreach (byte b in byteHash)
@@ -66,6 +71,6 @@ namespace lr11
             this.Hide();
             from.Show();
 
-        }
+        }  
     }
 }

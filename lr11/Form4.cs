@@ -7,14 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Xml.Linq;
 
 namespace lr11
 {
     public partial class Form4 : Form
     {
+        UserContext db;
+
         public Form4()
         {
             InitializeComponent();
+            
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -38,5 +43,15 @@ namespace lr11
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
     }
-}
+
+        
+    }
+    
+

@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace lr11
 {
@@ -25,6 +26,7 @@ namespace lr11
             from.Show();
         }
 
+ 
         private void label5_Click(object sender, EventArgs e)
         {
             Form3 from = new Form3();
@@ -48,7 +50,7 @@ namespace lr11
                             this.Hide();
                             from.Show();
                             MessageBox.Show("вы вошли под учетной записью " + user.Login1);
-                            //userForm.Show();
+                            
 
                         }
 
@@ -77,6 +79,7 @@ namespace lr11
             return hash;
         }
 
+        
         
     }
 }
