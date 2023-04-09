@@ -26,44 +26,51 @@ namespace lr11
             from.Show();
         }
 
- 
+
         private void label5_Click(object sender, EventArgs e)
         {
             Form3 from = new Form3();
             this.Hide();
             from.Show();
         }
-        
-            private void button1_Click(object sender, EventArgs e)
+
+        private void button1_Click(object sender, EventArgs e)
         {
             using (UserContext db = new UserContext())
             {
-                try
-                {
+                //try {
                     foreach (User user in db.Users)
                     {
+
 
                         if (textBox1.Text == user.Login1 && this.GetHashString(textBox2.Text) == user.Pasword)
                         {
                             MessageBox.Show("Вход успешен!");
                             Form4 from = new Form4();
-                            this.Hide();
-                            from.Show();
-                            MessageBox.Show("вы вошли под учетной записью " + user.Login1);
-                            
-
+                            from.label1.Text = ("Логин: ") + user.Login1;
+                            from.label3.Text = ("Почта: ") + user.email;
+                            from.label4.Text = ("телефон: ") + user.number_phone;
+                            from.label5.Text = ("Имя: ") + user.Name1;
+                            from.label6.Text = ("Фамилия: ") + user.FirstName;
+                            from.label7.Text = ("Дата первой покупки: ") + user.date_of_first_buy;
+                            from.label8.Text = ("День рождение: ") + user.Date_of_birthday;
+                            from.label9.Text = ("Адрес: ") + user.adres;
+                        MessageBox.Show("вы вошли под учетной записью " + user.Login1);
+                        this.Hide();
+                        from.Show();   
+                        this.Visible = false;
+                        return;
+                        
                         }
 
+                }
+                MessageBox.Show("Неверный пароль");
 
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("Логин или пароль указан неверно!");
-                }
+
             }
-
         }
+        
+
         private string GetHashString(string s)
         {
             byte[] bytes = Encoding.Unicode.GetBytes(s);
@@ -79,8 +86,10 @@ namespace lr11
             return hash;
         }
 
-        
-        
+
+
     }
 }
+
+
 

@@ -35,10 +35,6 @@ namespace lr11
             this.Date_of_birthday = Date_of_birthday;
             
         }
-        public string getName()
-        {
-            return this.Name1;
-        }
     }
 
 }

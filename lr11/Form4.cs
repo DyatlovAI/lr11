@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace lr11
 {
@@ -29,29 +30,20 @@ namespace lr11
             from.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-           
+            Form2 from = new Form2();
+            this.Hide(); 
+            from.Show();
         }
-
     }
+    }
+    
+    
 
         
-    }
+    
     
 

@@ -41,7 +41,7 @@ namespace lr11
 
                     db.Users.Add(user);
                     db.SaveChanges();
-
+                   
                 }
                 MessageBox.Show("Аккаунт  " + textBox8.Text + " зарегистрирован");
 
