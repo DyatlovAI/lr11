@@ -11,5 +11,6 @@ namespace lr11
     {
         public UserContext() : base("DbConnection") { }
         public DbSet<User> Users { get; set; }
+
     }
 }

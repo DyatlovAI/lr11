@@ -34,7 +34,7 @@ namespace lr11
             from.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+    private void button1_Click(object sender, EventArgs e)
         {
             using (UserContext db = new UserContext())
             {
